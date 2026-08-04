@@ -1,17 +1,19 @@
-# mcp-hal-fr
+# @pipeworx/hal-fr
 
-HAL (Hyper Articles en Ligne) MCP — French national open research archive.
+[HAL](https://hal.science) MCP — Hyper Articles en Ligne, the French national open archive of research output. Keyless.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `search` | Solr-style search across HAL. |
-| `get` | Single document by HAL id. |
-| `author` | Author lookup (free-text query). |
-| `structure` | Research-structure (lab/department) lookup. |
+- `search(query, fl?, fq?, rows?, start?, sort?)` — Solr-style search across HAL
+- `get(hal_id)` — single document by HAL id (e.g. "hal-00001234")
+- `author(name|id)` — author lookup
+- `structure(query)` — research structure (lab/department) lookup
+
+## Data source
+
+`https://api.archives-ouvertes.fr/search/` (Solr-backed REST).
 
 ## Quick Start
 
@@ -27,7 +29,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -51,7 +53,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
