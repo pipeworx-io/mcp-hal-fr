@@ -1,0 +1,91 @@
+[
+  {
+    "name": "search",
+    "description": "Solr-style search across HAL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Free-text or Solr query (e.g. \"title_t:transformer\")."
+        },
+        "fl": {
+          "type": "string",
+          "description": "Comma-sep fields to return."
+        },
+        "fq": {
+          "type": "string",
+          "description": "Solr filter query."
+        },
+        "rows": {
+          "type": "number",
+          "description": "1-10000 (default 25)."
+        },
+        "start": {
+          "type": "number",
+          "description": "0-based offset."
+        },
+        "sort": {
+          "type": "string",
+          "description": "e.g. \"submittedDate_tdate desc\""
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get",
+    "description": "Single document by HAL id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "hal_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "hal_id"
+      ]
+    }
+  },
+  {
+    "name": "author",
+    "description": "Author lookup (free-text query).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "number",
+          "description": "1-1000 (default 25)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "structure",
+    "description": "Research-structure (lab/department) lookup.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "number",
+          "description": "1-1000 (default 25)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  }
+]
