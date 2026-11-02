@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-hal-fr",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "HAL (Hyper Articles en Ligne) MCP — French national open research archive.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "hal-fr",
     "gatewaySlug": "hal-fr",
-    "sourceHash": "v1-b97495dea080babf496c610a29ea20cca81c0b28091e18541ec0748156b5e6db",
-    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
+    "sourceHash": "v1-efacfc864758944155724d490c3fa7148c9f57a52dc2e7bdb6e2925662cfb59e",
+    "sourceCommit": "0ca9712c0ac03bb0121cc7e81b202d0c45ac02ca"
   }
 }
